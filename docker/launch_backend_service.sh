@@ -48,7 +48,8 @@ STOP=false
 PIDS=()
 
 # Set the path to the NLTK data directory
-export NLTK_DATA="./nltk_data"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export NLTK_DATA="$SCRIPT_DIR/../nltk_data"
 
 # Function to handle termination signals
 cleanup() {
